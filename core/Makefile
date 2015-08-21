@@ -1737,21 +1737,14 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 
 RADIUM_TARGET_PACKAGE := $(PRODUCT_OUT)/$(RADIUM_VERSION).zip
 
-.PHONY: otapackage radium delta
+.PHONY: otapackage radium
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 radium: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(RADIUM_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(RADIUM_TARGET_PACKAGE) > $(RADIUM_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_CYN}"Enjoy the power of Radium 1.2, with Moar Radium :v"${CL_RST}
+	@echo -e ${CL_CYN}"Enjoy the power of Radium 1.3, with Poised Radium :v"${CL_RST}
 	@echo -e ${CL_CYN}"Package Complete: $(RADIUM_TARGET_PACKAGE)"${CL_RST}
-delta: $(hide) . $(TOPDIR)delta/RaDelta.sh
 
-ifeq ($(USE_PREBUILT_CHROMIUM),1)
-ifneq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
-	@echo -e ${CL_GRN}"Running Chromium prebuilt setup script..."${CL_RST}
-	$(hide) . $(TOPDIR)vendor/radium/tools/chromium_prebuilt.sh $(TOP)
-endif
-endif
 
 # -----------------------------------------------------------------
 # The factory package
