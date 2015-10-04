@@ -1753,7 +1753,7 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 radium: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(RADIUM_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(RADIUM_TARGET_PACKAGE) > $(RADIUM_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_CYN}"Enjoy the power of Radium 1.4, with Random Radium :v"${CL_RST}
+	$(shell figlet "Ionized-Radium")
 	@echo -e ${CL_CYN}"Package Complete: $(RADIUM_TARGET_PACKAGE)"${CL_RST}
 
 
