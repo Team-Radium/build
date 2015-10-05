@@ -1753,7 +1753,18 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 radium: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(RADIUM_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(RADIUM_TARGET_PACKAGE) > $(RADIUM_TARGET_PACKAGE).md5sum
-	$(shell figlet "Ionized-Radium")
+	$CL_CYN
+	@echo -e "";
+	@echo -e "▄▄▄█████▓▓█████ ▄▄▄       ███▄ ▄███▓    ██▀███   ▄▄▄      ▓█████▄  ██▓ █    ██  ███▄ ▄███▓";
+	@echo -e "▓  ██▒ ▓▒▓█   ▀▒████▄    ▓██▒▀█▀ ██▒   ▓██ ▒ ██▒▒████▄    ▒██▀ ██▌▓██▒ ██  ▓██▒▓██▒▀█▀ ██▒";
+	@echo -e "▒ ▓██░ ▒░▒███  ▒██  ▀█▄  ▓██    ▓██░   ▓██ ░▄█ ▒▒██  ▀█▄  ░██   █▌▒██▒▓██  ▒██░▓██    ▓██░";
+	@echo -e "░ ▓██▓ ░ ▒▓█  ▄░██▄▄▄▄██ ▒██    ▒██    ▒██▀▀█▄  ░██▄▄▄▄██ ░▓█▄   ▌░██░▓▓█  ░██░▒██    ▒██ ";
+	@echo -e "  ▒██▒ ░ ░▒████▒▓█   ▓██▒▒██▒   ░██▒   ░██▓ ▒██▒ ▓█   ▓██▒░▒████▓ ░██░▒▒█████▓ ▒██▒   ░██▒";
+	@echo -e "  ▒ ░░   ░░ ▒░ ░▒▒   ▓▒█░░ ▒░   ░  ░   ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ ▒▒▓  ▒ ░▓  ░▒▓▒ ▒ ▒ ░ ▒░   ░  ░";
+	@echo -e "    ░     ░ ░  ░ ▒   ▒▒ ░░  ░      ░     ░▒ ░ ▒░  ▒   ▒▒ ░ ░ ▒  ▒  ▒ ░░░▒░ ░ ░ ░  ░      ░";
+	@echo -e "  ░         ░    ░   ▒   ░      ░        ░░   ░   ░   ▒    ░ ░  ░  ▒ ░ ░░░ ░ ░ ░      ░   ";
+	@echo -e "            ░  ░     ░  ░       ░         ░           ░  ░   ░     ░     ░            ░   ";
+	@echo -e "                                                           ░                              ";
 	@echo -e ${CL_CYN}"Package Complete: $(RADIUM_TARGET_PACKAGE)"${CL_RST}
 
 
