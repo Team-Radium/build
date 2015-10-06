@@ -1753,7 +1753,6 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 radium: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(RADIUM_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(RADIUM_TARGET_PACKAGE) > $(RADIUM_TARGET_PACKAGE).md5sum
-	$CL_CYN
 	@echo -e "";
 	@echo -e "▄▄▄█████▓▓█████ ▄▄▄       ███▄ ▄███▓    ██▀███   ▄▄▄      ▓█████▄  ██▓ █    ██  ███▄ ▄███▓";
 	@echo -e "▓  ██▒ ▓▒▓█   ▀▒████▄    ▓██▒▀█▀ ██▒   ▓██ ▒ ██▒▒████▄    ▒██▀ ██▌▓██▒ ██  ▓██▒▓██▒▀█▀ ██▒";
